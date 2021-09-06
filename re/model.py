@@ -38,7 +38,7 @@ class NLLModel(nn.Module):
             loss = sum([output[0] for output in outputs]) / num_models
             logits = [output[1] for output in outputs]
             probs = [F.softmax(logit, dim=-1) for logit in logits]
-            avg_prob = torch.stack(probs, dim=0).mean(0).detach()
+            avg_prob = torch.stack(probs, dim=0).mean(0)
             reg_loss = sum([kl_div(avg_prob, prob) for prob in probs]) / num_models
             loss = loss + self.args.alpha_t * reg_loss.mean()
             model_output = (loss,) + model_output[1:] + (reg_loss,)
