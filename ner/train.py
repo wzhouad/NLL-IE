@@ -99,7 +99,7 @@ def main():
 
     parser.add_argument("--project_name", type=str, default="NLL-IE-NER")
     parser.add_argument("--n_model", type=int, default=2)
-    parser.add_argument("--alpha", type=float, default=20.0)
+    parser.add_argument("--alpha", type=float, default=50.0)
     parser.add_argument("--alpha_warmup_ratio", default=0.1, type=float)
 
     args = parser.parse_args()
