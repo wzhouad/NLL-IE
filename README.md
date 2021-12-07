@@ -12,7 +12,7 @@ Code for EMNLP 2021 paper [Learning from Noisy Labels for Entity-Centric Informa
 * seqeval
 
 ## Dataset
-The TACRED dataset can be obtained from [this link](https://nlp.stanford.edu/projects/tacred/). The TACREV and can be obtained following the instructions in [tacrev](https://github.com/DFKI-NLP/tacrev). The CoNLL dataset can be obtained following the instructions in [this link](https://github.com/ZihanWangKi/CrossWeigh). The expected structure of files is:
+The TACRED dataset can be obtained from [this link](https://nlp.stanford.edu/projects/tacred/). The TACREV dataset can be obtained following the instructions in [tacrev](https://github.com/DFKI-NLP/tacrev). The original CoNLL dataset can be obtained from [this link](https://github.com/pfliu-nlp/Named-Entity-Recognition-NER-Papers/tree/master/ner_dataset/CoNLL2003). The revised CoNLL test dataset can be obtained from [this link](https://github.com/ZihanWangKi/CrossWeigh/tree/master/data). The expected structure of files is:
 ```
 NLL-IE
  |-- re
@@ -24,10 +24,10 @@ NLL-IE
  |    |    |-- test_rev.json
  |-- ner
  |    |-- data
- |    |    |-- conllpp_train.txt     
- |    |    |-- conllpp_dev.txt
+ |    |    |-- train.txt     
+ |    |    |-- dev.txt
+ |    |    |-- test.txt
  |    |    |-- conllpp_test.txt
- |    |    |-- conllpp_test_rev.txt
 ```
 
 ## Training and Evaluation
